@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="Читалка манги «Другой мир без инструкции»." />
+  <title>Другой мир без инструкции — Читать мангу</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <header class="topbar">
+    <div class="title-wrap">
+      <strong>Другой мир без инструкции</strong>
+      <small id="chapterTitle">Глава 1</small>
+    </div>
+
+    <div class="top-actions">
+      <label class="chapter-picker">
+        <span>Глава</span>
+        <select id="chapterSelect" aria-label="Выбрать главу"></select>
+      </label>
+      <button class="icon-button" id="fullscreenBtn" type="button" title="Полный экран" aria-label="Полный экран">⛶</button>
+    </div>
+  </header>
+
+  <main class="reader" id="reader">
+    <button class="side-nav left" id="prevBtn" type="button" aria-label="Предыдущая страница">‹</button>
+
+    <section class="page-wrap" id="pageStage" aria-live="polite">
+      <div class="loader" id="loader" aria-hidden="true"><i></i><i></i><i></i></div>
+      <img id="mangaPage" alt="Страница манги" draggable="false" />
+    </section>
+
+    <button class="side-nav right" id="nextBtn" type="button" aria-label="Следующая страница">›</button>
+  </main>
+
+  <footer class="bottombar">
+    <button class="bottom-button" id="prevMini" type="button">← Назад</button>
+
+    <div class="progress-box">
+      <div class="progress-meta">
+        <span id="pageLabel">Страница 1 из 1</span>
+        <span id="percentLabel">100%</span>
+      </div>
+      <input id="pageRange" type="range" min="1" max="1" value="1" aria-label="Перейти к странице" />
+    </div>
+
+    <button class="bottom-button primary" id="nextMini" type="button">Дальше →</button>
+  </footer>
+
+  <div class="hint" id="hint">← → листать • свайп на телефоне • F — полный экран</div>
+
+  <script src="reader.js"></script>
+</body>
+</html>
